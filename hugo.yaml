@@ -154,11 +154,18 @@ params:
     title: "Zisen Dai"
     subtitle: "B.S. in Physics, Tsinghua University | Exchange Student, UC Berkeley"
     content: >
-      I am a 3rd-year undergraduate student majoring in Physics at <a href="https://www.tsinghua.edu.cn/en/" target="_blank" style="color: inherit; text-decoration: underline;">Tsinghua University</a>, and currently an exchange student in Astrophysics at <a href="https://www.berkeley.edu/" target="_blank" style="color: inherit; text-decoration: underline;">UC Berkeley</a>. My research broadly focuses on theoretical and observational astrophysics. I am particularly interested in cosmic ray transport in protoplanetary disks, high-energy transients, and applying machine learning techniques to astronomical data analysis. <br><br> Currently, I work as a Research Assistant in <a href="https://i.astro.tsinghua.edu.cn/~xbai/" target="_blank" style="color: inherit; text-decoration: underline;">Xuening Bai's group</a> at the Institute for Advanced Study, Tsinghua University, and concurrently an exchange student in <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">Wenbin Lu's group</a> at UC Berkeley.
+      Hello! I'm Zisen Dai (戴子森, pronounced <i>Zee-sen Dye</i>), a 3rd-year undergraduate student majoring in Physics at <a href="https://www.tsinghua.edu.cn/en/" 
+      target="_blank" style="color: inherit; text-decoration: underline;">Tsinghua University</a>. 
+      I am currently visiting <a href="https://www.berkeley.edu/" target="_blank" style="color: inherit; text-decoration: underline;">UC Berkeley</a> 
+      as an exchange student in Astrophysics. <br><br>
+      My research broadly focuses on theoretical and observational astrophysics. 
+      At Tsinghua, I work on cosmic ray transport in protoplanetary disks advised by <a href="https://i.astro.tsinghua.edu.cn/~xbai/" 
+      target="_blank" style="color: inherit; text-decoration: underline;">Xuening Bai</a>. 
+      Concurrently at UC Berkeley, I am investigating high-energy transients in <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">Wenbin Lu's group</a>. 
+      I am deeply fascinated by these extreme phenomena and aspire to leverage analytical models to uncover the physical mechanisms behind them.
     image: /avatar.jpg
     bottomImage:
       enable: true
-    # roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Curriculum Vitae"
@@ -172,7 +179,7 @@ params:
         - icon: fas fa-envelope
           url: mailto:zsdai@berkeley.edu
 
-  # Education
+ # Education
   education:
     enable: true
     title: "Education"
@@ -180,11 +187,12 @@ params:
     items:
       - title: "Exchange Student in Astrophysics"
         school:
-          name: "University of California, Berkeley"
+          name: "UC Berkeley"
           url: "https://www.berkeley.edu"
         date: "Jan 2026 - Present"
-        content: |-
-          - **Adviser:** [Wenbin Lu](https://wenbinlu.github.io/)
+        # content: |-
+        #   - **Adviser:** <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">
+        #                   Wenbin Lu</a>
 
       - title: "Bachelor of Science in Physics"
         school:
@@ -195,86 +203,34 @@ params:
         content: |-
           - **Honors:** National Scholarship, Chi-Sun Yeh Scholarship (Highest Honor for Physics Undergrads).
           - **Program:** Member of the *Tsinghua Xuetang Talents Program*.
-          
-  # Experience
+
+  # Research Experience
   experience:
     enable: true
-    # title: "Custom Name"
+    title: "Research Experience"
     items:
-      - company: "Facebook"
-        companyUrl: "https://example.com"
+      - company: "Department of Astronomy, UC Berkeley"
+        companyUrl: "https://astro.berkeley.edu/"
         jobs:
-          - name: "Senior Software Developer"
-            date: "Jan 2023 - present"
-            content: "I am currently working as a senior software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-            info:
-              content: Working as a senior software developer
-            featuredItems:
-              fontAwesomeIcons:
-                - icon: fa-brands fa-react
-                  url: https://react.dev/
-                  tooltip: Example tooltip content
-                - icon: fab fa-x-twitter
-                  url: https://example.com
-                  # tooltip: Example tooltip content
-              customIcons:
-                - icon: /fav.png
-                  url: "https://example.com"
-                  tooltip: Example tooltip content
-          - name: "Software Developer"
-            date: "Jan 2022 - Dec 2023"
-            content: "I worked as a software developer. I worked on a project that will be used to help people find the best way to get around the city."
+          - name: "Research Assistant"
+            date: "Feb 2026 - Present"
+            content: |-
+              *Advised by <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit;">
+              Wenbin Lu</a>*
 
-      - company: "Amazon"
-        companyUrl: "https://example.com"
+              - Tracking cutting-edge developments in high-energy transients via weekly group discussions.
+              
+      - company: "Institute for Advanced Study, Tsinghua University"
+        companyUrl: "https://www.ias.tsinghua.edu.cn/en"
         jobs:
-          - name: "Software Developer"
-            date: "Sep 2020 - Dec 2021"
-            info:
-              content: I worked as a software developer for more than one year in Amazon.
-            content: |
-              I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - name: "Research Assistant"
+            date: "Mar 2025 - Present"
+            content: |-
+              *Advised by <a href="https://i.astro.tsinghua.edu.cn/~xbai/" 
+              target="_blank" style="color: inherit;">Xuening Bai</a>*
 
-              - Lead backend developer for a product.
-              - Created a frontend design for a product.
-
-      - company: "Apple"
-        companyUrl: "https://example.com"
-        jobs: 
-        - name: "Junior Software Developer"
-          date: "Jan 2020 - Aug 2020"
-          featuredItems:
-            fontAwesomeIcons:
-              - icon: fa-brands fa-react
-                url: https://react.dev/
-              - icon: fab fa-x-twitter
-                url: https://example.com
-            customIcons:
-              - icon: /fav.png
-                url: "https://example.com"
-          content: |
-            I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-            - Lead backend developer for a product.
-            - Created a frontend design for a product.
-
-      - company: "Netflix"
-        companyUrl: "https://example.com"
-        jobs:
-        - name: "UI/UX Designer"
-          date: "June 2017 - Nov 2019"
-          content: |
-            I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-            - Lead backend developer for a product.
-            - Created a frontend design for a product.
-
-      - company: "Google"
-        companyUrl: "https://example.com"
-        jobs:
-        - name: "Product Designer"
-          date: "Feb 2016 - Mar 2017"
-          content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+              - Investigating cosmic ray transport dynamics within protoplanetary disk (PPD) winds.
+              - Developed a Python simulation framework from scratch to model particle transport via the Guiding Center Approximation, analyzing the impact of scattering mechanisms and strengths.
 
   # Achievements
   achievements:
