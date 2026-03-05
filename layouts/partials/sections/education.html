@@ -46,7 +46,6 @@
 </section>
 
 <style>
-    /* 让超链接恢复下划线和颜色 */
     #education .edu-link, 
     #education .education-content a, 
     #education .edu-gpa a {
@@ -54,14 +53,12 @@
         font-weight: 600;
     }
 
-    /* 白天模式：经典学术蓝 */
     body:not(.dark-theme) #education .edu-link, 
     body:not(.dark-theme) #education .education-content a, 
     body:not(.dark-theme) #education .edu-gpa a { 
         color: #0056b3; 
     }
 
-    /* 黑夜模式：通透的浅蓝色 */
     html[data-theme="dark"] #education .edu-link, 
     html[data-theme="dark"] #education .education-content a, 
     html[data-theme="dark"] #education .edu-gpa a,
@@ -71,13 +68,11 @@
         color: #60a5fa !important; 
     }
 
-    /* 修复黑夜模式下 Markdown 加粗字体 (**) 融入背景看不清的问题 */
     html[data-theme="dark"] #education strong,
     html[data-bs-theme="dark"] #education strong {
         color: #f3f4f6 !important;
     }
     
-    /* 让黑夜模式的日期也清晰可见 */
     html[data-theme="dark"] #education .text-muted,
     html[data-bs-theme="dark"] #education .text-muted {
         color: #d1d5db !important;

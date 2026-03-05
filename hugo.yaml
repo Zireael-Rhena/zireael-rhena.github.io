@@ -154,7 +154,7 @@ params:
     title: "Zisen Dai"
     subtitle: "B.S. in Physics, Tsinghua University | Exchange Student, UC Berkeley"
     content: >
-      Hello! I'm Zisen Dai (戴子森, pronounced <i>Zee-sen Dye</i>), a 3rd-year undergraduate student majoring in Physics 
+      Hello! I'm Zisen Dai /ˈziː sən daɪ/ (戴子森), a 3rd-year undergraduate student majoring in Physics 
       at <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>. I am currently visiting 
       <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> as an exchange student in Astrophysics. <br><br>
       My research broadly focuses on theoretical and observational astrophysics. At Tsinghua, I work on cosmic ray transport in protoplanetary disks 
@@ -203,7 +203,7 @@ params:
           - **Honors:** 
             - National Scholarship (*Highest Honor for Undergraduates*) 
             - Chi-Sun Yeh Scholarship (*Highest Honor for Physics Undergraduates*)
-          - **Program:** Member of the *Tsinghua Xuetang Talents Program*.
+          - **Program:** Member of the *Tsinghua Xuetang Talents Program*
 
   # Research Experience
   experience:
@@ -258,52 +258,52 @@ params:
   # projects
   projects:
     enable: true
-    # title: "Custom Name"
+    title: "Selected Projects"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
+      - title: "High-Redshift LBGs Selection via Machine Learning"
+        content: "Developed a LightGBM classifier to identify high-redshift Lyman Break Galaxies (z ~ 2-3) from CLAUDS photometric data. 
+          By correcting selection bias via TSR/SSR metrics, the model achieved 0.995 AUC and 92.0% purity, significantly outperforming traditional u-dropout methods."
+        image: "/images/projects/lbg_selection.png"
         featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
+          name: "Read Report"
+          link: "https://zireael-rhena.github.io/Target_Selection_Based_on_Photometric_Data/Final_Report_of_Statistical_Methods_in_Astrophysics.pdf"
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          - "Photometry"
+          - "LBGs"
+          - "Machine Learning"
         links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+          - icon: "fab fa-github"
+            url: "https://github.com/Zireael-Rhena/Target_Selection_Based_on_Photometric_Data"
 
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
+      - title: "JUNO Optical Simulation & Signal Reconstruction"
+        content: "Built a Python-based Monte Carlo framework to simulate complex photon transport and Fresnel reflection for 17,612 PMTs. 
+          Engineered a high-capacity LightGBM model with multi-center Gaussian attention to reconstruct spatial-temporal Probe functions, reducing integral error to ~3%."
+        image: "/images/projects/juno.png"
         featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
+          name: "View Source"
+          link: "https://github.com/Zireael-Rhena/JUNO-Reconstruction"
         badges:
-          - "Django"
-          - "Bootstrap"
+          - "Simulation"
+          - "Monte Carlo"
+          - "Machine Learning"
         links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
+          - icon: "fab fa-github"
+            url: "https://github.com/Zireael-Rhena/JUNO-Reconstruction"
 
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
+      - title: "Supernova Spectrum & Light Curve Analysis"
+        content: "Analyzed multi-band photometric and spectroscopic data to classify SN 2025kid as a Type Ia supernova. 
+          Extracted key parameters (peak magnitude, decline rate) of SN 2025fvw via light curve fitting, utilizing the Phillips relation for standardization."
+        image: "/images/projects/sn_lightcurve.png"
         featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
+          name: "Read Report"
+          link: "https://zireael-rhena.github.io/Spectrum-and-Light-Curve-Analysis-of-SN/ObsAstro25_Project2_Final_Report.pdf"
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          - "Spectroscopy"
+          - "Photometry"
+          - "Data Analysis"
         links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+          - icon: "fab fa-github"
+            url: "https://github.com/Zireael-Rhena/Spectrum-and-Light-Curve-Analysis-of-SN"
 
   #Contact
   contact:

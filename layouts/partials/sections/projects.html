@@ -1,0 +1,198 @@
+{{ if .Site.Params.projects.enable | default false }}
+{{- $projects := .Site.Language.Params.projects | default .Site.Params.projects -}}
+<section id="projects" class="py-5">
+    <div class="container">
+        <h3 class="text-center mb-5">{{ $projects.title | default .Site.Params.projects.title | default (i18n "projects") }}</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+            {{ range $projects.items | default .Site.Params.projects.items }}
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card shadow-sm border-0 h-100 academic-card" title="{{ .title }}">
+                    
+                    <div class="card-head project-img-container">
+                        <img class="project-img" src="{{ .image }}" alt="{{ .title }}">
+                    </div>
+
+                    <div class="card-body p-4 flex-grow-1">
+                        <div class="pb-3">
+                            {{ range .badges }}
+                            <span class="badge academic-badge me-1">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        <h5 class="card-title fw-bold" style="font-size: 1.15rem;">{{ .title }}</h5>
+                        <div class="card-text text-muted" style="font-size: 0.9rem; line-height: 1.6;">
+                            {{ .content }}
+                        </div>
+                    </div>
+                    
+                    {{ if or (.links) (.featured) }}
+                    <div class="card-footer bg-transparent border-0 px-4 pb-4 pt-0 d-flex justify-content-between align-items-center">
+                        
+                        {{ if .featured }}
+                            {{ $btnIcon := "fas fa-link" }}
+                            {{ if in (lower .featured.name) "report" }}{{ $btnIcon = "fas fa-file-pdf" }}{{ end }}
+                            {{ if in (lower .featured.name) "source" }}{{ $btnIcon = "fas fa-code" }}{{ end }}
+                            
+                            <a class="btn btn-sm academic-btn" href="{{ .featured.link }}" target="_blank">
+                                <i class="{{ $btnIcon }} me-1"></i> {{ .featured.name }}
+                            </a>
+                        {{ end }}
+                        
+                        <span>
+                            {{ range .links }}
+                            <a href="{{ .url }}" target="_blank" class="academic-icon-link ms-2">
+                                <i class="{{ .icon }} fa-lg"></i>
+                            </a>
+                            {{ end }}
+                        </span>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<style>
+    .project-img-container {
+        height: 220px; 
+        width: 100%;
+        background-color: #ffffff; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 0.5rem 0.5rem 0 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05); 
+    }
+    
+    .project-img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain; 
+    }
+
+    .academic-card {
+        border-radius: 0.5rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .academic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1) !important;
+    }
+
+    .academic-badge {
+        background-color: rgba(13, 110, 253, 0.1);
+        color: #0d6efd;
+        font-weight: 500;
+        border: none;
+        padding: 0.4em 0.65em;
+    }
+    
+    .academic-btn {
+        background-color: #f8f9fa !important; 
+        color: #212529 !important;           
+        font-weight: 600;
+        border-radius: 6px;
+        border: 1px solid #dee2e6 !important; 
+        padding: 0.375rem 0.8rem;
+        transition: all 0.2s ease;
+    }
+    .academic-btn:hover {
+        background-color: #e2e6ea !important; 
+        color: #000000 !important;
+        transform: translateY(-1px);
+    }
+
+    .academic-icon-link {
+        color: #6c757d;
+        transition: color 0.2s ease;
+    }
+    .academic-icon-link:hover { color: #212529; }
+
+    html.dark .project-img-container,
+    body.dark .project-img-container,
+    body.dark-theme .project-img-container,
+    [data-theme="dark"] .project-img-container,
+    [data-bs-theme="dark"] .project-img-container,
+    html[data-theme="dark"] .project-img-container {
+        background-color: #f8f9fa; 
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    html.dark .academic-card,
+    body.dark .academic-card,
+    body.dark-theme .academic-card,
+    [data-theme="dark"] .academic-card,
+    [data-bs-theme="dark"] .academic-card,
+    html[data-theme="dark"] .academic-card {
+        background-color: #212529;
+        border: 1px solid rgba(255,255,255,0.05) !important;
+    }
+    
+    html.dark .academic-badge,
+    body.dark .academic-badge,
+    body.dark-theme .academic-badge,
+    [data-theme="dark"] .academic-badge,
+    [data-bs-theme="dark"] .academic-badge,
+    html[data-theme="dark"] .academic-badge {
+        background-color: rgba(96, 165, 250, 0.15);
+        color: #93c5fd;
+    }
+    
+    html.dark .academic-btn,
+    body.dark .academic-btn,
+    body.dark-theme .academic-btn,
+    [data-theme="dark"] .academic-btn,
+    [data-bs-theme="dark"] .academic-btn,
+    html[data-theme="dark"] .academic-btn {
+        background-color: #2b3035 !important;
+        color: #f8f9fa !important;
+        border-color: #495057 !important;
+    }
+    
+    html.dark .academic-btn:hover,
+    body.dark .academic-btn:hover,
+    body.dark-theme .academic-btn:hover,
+    [data-theme="dark"] .academic-btn:hover,
+    [data-bs-theme="dark"] .academic-btn:hover,
+    html[data-theme="dark"] .academic-btn:hover {
+        background-color: #343a40 !important;
+        color: #ffffff !important;
+    }
+    
+    html.dark .academic-icon-link,
+    body.dark .academic-icon-link,
+    body.dark-theme .academic-icon-link,
+    [data-theme="dark"] .academic-icon-link,
+    [data-bs-theme="dark"] .academic-icon-link,
+    html[data-theme="dark"] .academic-icon-link {
+        color: #adb5bd;
+    }
+    html.dark .academic-icon-link:hover,
+    body.dark .academic-icon-link:hover,
+    body.dark-theme .academic-icon-link:hover,
+    [data-theme="dark"] .academic-icon-link:hover,
+    [data-bs-theme="dark"] .academic-icon-link:hover,
+    html[data-theme="dark"] .academic-icon-link:hover {
+        color: #f8f9fa;
+    }
+    
+    html.dark .card-title,
+    body.dark .card-title,
+    body.dark-theme .card-title,
+    [data-theme="dark"] .card-title,
+    [data-bs-theme="dark"] .card-title,
+    html[data-theme="dark"] .card-title {
+        color: #f8f9fa;
+    }
+    html.dark .card-text.text-muted,
+    body.dark .card-text.text-muted,
+    body.dark-theme .card-text.text-muted,
+    [data-theme="dark"] .card-text.text-muted,
+    [data-bs-theme="dark"] .card-text.text-muted,
+    html[data-theme="dark"] .card-text.text-muted {
+        color: #adb5bd !important;
+    }
+</style>
+{{ end }}
