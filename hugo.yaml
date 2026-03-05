@@ -154,18 +154,17 @@ params:
     title: "Zisen Dai"
     subtitle: "B.S. in Physics, Tsinghua University | Exchange Student, UC Berkeley"
     content: >
-      Hello! I'm Zisen Dai (戴子森, pronounced <i>Zee-sen Dye</i>), a 3rd-year undergraduate student majoring in Physics at <a href="https://www.tsinghua.edu.cn/en/" 
-      target="_blank" style="color: inherit; text-decoration: underline;">Tsinghua University</a>. 
-      I am currently visiting <a href="https://www.berkeley.edu/" target="_blank" style="color: inherit; text-decoration: underline;">UC Berkeley</a> 
-      as an exchange student in Astrophysics. <br><br>
-      My research broadly focuses on theoretical and observational astrophysics. 
-      At Tsinghua, I work on cosmic ray transport in protoplanetary disks advised by <a href="https://i.astro.tsinghua.edu.cn/~xbai/" 
-      target="_blank" style="color: inherit; text-decoration: underline;">Xuening Bai</a>. 
-      Concurrently at UC Berkeley, I am investigating high-energy transients in <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">Wenbin Lu's group</a>. 
+      Hello! I'm Zisen Dai (戴子森, pronounced <i>Zee-sen Dye</i>), a 3rd-year undergraduate student majoring in Physics 
+      at <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>. I am currently visiting 
+      <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> as an exchange student in Astrophysics. <br><br>
+      My research broadly focuses on theoretical and observational astrophysics. At Tsinghua, I work on cosmic ray transport in protoplanetary disks 
+      advised by <a href="https://i.astro.tsinghua.edu.cn/~xbai/" target="_blank">Xuening Bai</a>. Concurrently at UC Berkeley, 
+      I am investigating high-energy transients in <a href="https://wenbinlu.github.io/" target="_blank">Wenbin Lu's group</a>. 
       I am deeply fascinated by these extreme phenomena and aspire to leverage analytical models to uncover the physical mechanisms behind them.
     image: /avatar.jpg
     bottomImage:
       enable: true
+    roundImage: true
     button:
       enable: true
       name: "Curriculum Vitae"
@@ -201,7 +200,9 @@ params:
         date: "Aug 2023 - Present"
         GPA: "**GPA: 4.0 / 4.0** | **Rank: 1 / 28**"
         content: |-
-          - **Honors:** National Scholarship, Chi-Sun Yeh Scholarship (Highest Honor for Physics Undergrads).
+          - **Honors:** 
+            - National Scholarship (*Highest Honor for Undergraduates*) 
+            - Chi-Sun Yeh Scholarship (*Highest Honor for Physics Undergraduates*)
           - **Program:** Member of the *Tsinghua Xuetang Talents Program*.
 
   # Research Experience

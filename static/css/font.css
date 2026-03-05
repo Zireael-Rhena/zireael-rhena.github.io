@@ -1,0 +1,62 @@
+/* =========================================
+   1. 字体修复：加粗骨架，使用顶级无衬线黑体
+   ========================================= */
+body, p, a, span, li, .primary-font, #primary-font, .secondary-font, #secondary-font, .default-font, #default-font {
+    /* 调整了字体顺序，确保中文能正确调用苹果系统黑体和雅黑 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+    letter-spacing: normal !important; 
+    word-spacing: normal !important;
+    /* 🚀 核心修复：强制重置基础字重，解决中文干瘪、太细的问题 */
+    font-weight: 400 !important; 
+}
+
+/* 确保所有标题依然有足够的厚重感 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* =========================================
+   2. 颜色精准修复：干掉“雪地白熊”和“黑夜乌鸦”
+   ========================================= */
+
+/* 白天模式：保持正常，防止过黑 */
+body { color: #333333; }
+
+/* --- 黑夜模式 (Dark Mode) 深度适配 --- */
+
+/* 修复基础正文颜色（柔和的亮灰色） */
+html[data-theme="dark"] body, 
+html[data-bs-theme="dark"] body, 
+body.dark-theme body {
+    color: #e5e7eb !important;
+}
+
+/* 🚀 核心修复：把 Education 瞎眼的白底卡片强行按黑！ */
+html[data-theme="dark"] .card, 
+html[data-bs-theme="dark"] .card,
+html[data-theme="dark"] .box-masonry {
+    background-color: #1f2937 !important; /* 高级深灰底色 */
+    color: #f3f4f6 !important; /* 亮白文字 */
+    border: 1px solid #374151 !important; /* 加上轻微的边框提升质感 */
+}
+
+/* 🚀 核心修复：提亮 Research Experience 里的瞎眼暗黑文字 (列表、小标题、日期) */
+html[data-theme="dark"] li,
+html[data-theme="dark"] .text-muted,
+html[data-bs-theme="dark"] li,
+html[data-bs-theme="dark"] .text-muted {
+    color: #d1d5db !important; /* 统一提亮成浅灰色，保证清晰度 */
+}
+
+/* 修复暗色模式下的超链接（比如你的科研小标题和组名） */
+html[data-theme="dark"] a,
+html[data-bs-theme="dark"] a {
+    color: #60a5fa !important; /* 换成非常通透的浅蓝色，黑夜里很显眼 */
+}
+
+/* 强制所有层级标题在黑夜模式下全白 */
+html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5,
+html[data-bs-theme="dark"] h1, html[data-bs-theme="dark"] h2, html[data-bs-theme="dark"] h3, html[data-bs-theme="dark"] h4, html[data-bs-theme="dark"] h5 {
+    color: #ffffff !important;
+}
