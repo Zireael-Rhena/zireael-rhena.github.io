@@ -176,7 +176,7 @@ params:
         - icon: fab fa-github
           url: https://github.com/Zireael-Rhena
         - icon: fas fa-envelope
-          url: mailto:zsdai@berkeley.edu
+          url: mailto:1993803553qq@gmail.com
 
  # Education
   education:
@@ -309,9 +309,9 @@ params:
   contact:
     enable: true
     # title: "Custom Name"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    content: My inbox is always open—whether about my research or to chat, I’d love to hear from you.
     btnName: Mail me
-    btnLink: mailto:gurusabarisha@gmail.com
+    btnLink: mailto:1993803553qq@gmail.com
     # formspree:
     #   enable: true # `contact.email` value will be ignored
     #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
