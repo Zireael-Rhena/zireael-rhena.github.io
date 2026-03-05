@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .project-title {
+    font-family: 'Lora', serif !important;
+    letter-spacing: 0.5px;
+}
+
+body, p, span, .btn, .badge {
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.7;
+}
+
+body.dark {
+    --primary-color: #5c93fa !important;
+    --text-color-primary: #e0e0e0 !important;
+}
+
+body.dark #content p a,
+body.dark #content ul a,
+body.dark #content ol a,
+body.dark .card-text a,
+body.dark .education-details a {
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+}
+
+body.dark #content p a:hover,
+body.dark .card-text a:hover {
+    color: #ffffff !important;
+}
+
+body.dark .btn:not(.btn-primary),
+body.dark .social-links a,
+body.dark .navbar .btn {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark .btn:not(.btn-primary):hover,
+body.dark .social-links a:hover,
+body.dark .navbar .btn:hover {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+body.dark .btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+body.dark .btn-primary:hover {
+    background-color: #3b79f8 !important;
+}
+
+body.dark .nav-tabs .nav-link.active,
+.nav-tabs .nav-link.active {
+    color: var(--primary-color) !important;
+    border-bottom: 2px solid var(--primary-color) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.3px;
+}
+
+body.dark .nav-tabs .nav-link:not(.active),
+.nav-tabs .nav-link:not(.active) {
+    font-weight: 400 !important;
+    transition: all 0.2s ease-in-out;
+}
+body.dark .nav-tabs .nav-link:not(.active):hover {
+    color: #ffffff !important;
+}
+
+body.dark .card {
+    background-color: #1e2125 !important;
+    border: 1px solid #333 !important;
+}
+body.dark .badge {
+    background-color: #2b3035 !important;
+    color: #a0aab2 !important;
+}
+
+body.dark .card-title,
+body.dark .navbar-brand {
+    color: #f8f9fa !important;
+}
+body.dark p,
+body.dark .text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark #content h3 a,
+body.dark #content h4 a,
+body.dark #content h5 a,
+body.dark #content h6 a,
+body.dark .timeline-heading a,
+body.dark .institution a,
+body.dark #education a:not(.btn),
+body.dark #experience a:not(.btn) {
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+body.dark #content h3 a:hover,
+body.dark #content h4 a:hover,
+body.dark #content h5 a:hover,
+body.dark #content h6 a:hover,
+body.dark #education a:not(.btn):hover,
+body.dark #experience a:not(.btn):hover {
+    color: #ffffff !important;
+}
+
+body.dark #education a:not(.btn),
+body.dark #education a:not(.btn) * { 
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+}
+
+body.dark #education a:not(.btn):hover,
+body.dark #education a:not(.btn):hover * {
+    color: #ffffff !important;
+}
+
+#v-pills-tab .nav-link.active,
+#experience .nav-link.active,
+.experience-section .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+    background-color: transparent !important;
+    border-left: 3px solid var(--primary-color) !important;
+}
+
+body.dark #v-pills-tab .nav-link.active {
+    color: #5c93fa !important;
+}
+
+#v-pills-tab .nav-link:not(.active),
+#experience .nav-link:not(.active) {
+    font-weight: 400 !important;
+    color: #888 !important;
+    border-left: 3px solid transparent !important;
+}
+
+#v-pills-tab .nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(92, 147, 250, 0.1) !important;
+}

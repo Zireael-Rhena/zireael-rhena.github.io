@@ -1,0 +1,12 @@
+<footer class="footer text-center b-0 pt-4 pb-3">
+    <div class="container">
+        {{ if .Site.Params.favicon }}
+        <img src="{{ .Site.Params.favicon }}" alt="Logo" width="30" height="30" class="mb-2">
+        {{ end }}
+        
+        <div class="text-muted" style="font-size: 0.9rem;">
+            &copy; {{ now.Year }} Zisen Dai. All rights reserved. <br>
+            Last updated: {{ now.Format "January 2006" }}
+        </div>
+    </div>
+</footer>
