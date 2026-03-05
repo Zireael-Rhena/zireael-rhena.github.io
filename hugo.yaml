@@ -1,6 +1,7 @@
 baseURL: "https://zireael-rhena.github.io/"
 languageCode: "en-us"
 title: "Zisen Dai | Tsinghua University"
+description: Undergraduate researcher in Astrophysics at Tsinghua University. Welcome to my personal website.
 theme: hugo-profile
 relativeURLs: true
 canonifyURLs: false
