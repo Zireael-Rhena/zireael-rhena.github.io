@@ -1,6 +1,6 @@
 baseURL: "https://zireael-rhena.github.io/"
 languageCode: "en-us"
-title: "Zisen Dai"
+title: "Zisen Dai | Tsinghua University"
 theme: hugo-profile
 relativeURLs: true
 canonifyURLs: false
@@ -77,10 +77,10 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Zisen Dai"
-  description: Text about my cool site
+  title: "Zisen Dai | Tsinghua University"
+  description: Undergraduate researcher in Astrophysics at Tsinghua University. Welcome to my personal website.
   # staticPath: ""  # The path to serve the static files from
-  # favicon: "/fav.png"
+  favicon: "/favicon.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
