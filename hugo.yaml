@@ -38,9 +38,9 @@ outputs:
 
 enableRobotsTXT: true
 
-#services:
-  #googleAnalytics:
-    #id: G-MEASUREMENT_ID
+services:
+  googleAnalytics:
+    id: "G-07LGRYX7HW"
   #disqus:
     #shortname: your-disqus-shortname
 
