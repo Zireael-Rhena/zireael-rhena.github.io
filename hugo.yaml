@@ -263,6 +263,21 @@ params:
     enable: true
     title: "Selected Projects"
     items:
+      - title: "Rosseland-Mean Opacity Computation"
+        content: "Developed a Python framework to computing the Rosseland-mean opacity of pure hydrogen gas in
+          LTE, and benchmarking it against the LANL/TOPS opacity tables. Localized the main opacity discrepancy domains and analyzed the missing physical channels and
+          omitted physics causing the issue."
+        image: "/images/projects/benchmark_kR_vs_T_slide.png"
+        featured:
+          name: "View Source"
+          link: "https://github.com/Zireael-Rhena/Rosseland-Mean-Opacity"
+        badges:
+          - "Rosseland-Mean Opacity"
+          - "Radiative Transfer"
+        links:
+          - icon: "fab fa-github"
+            url: "https://github.com/Zireael-Rhena/Rosseland-Mean-Opacity"
+
       - title: "High-Redshift LBGs Selection via Machine Learning"
         content: "Developed a LightGBM classifier to identify high-redshift Lyman Break Galaxies (z ~ 2-3) from CLAUDS photometric data. 
           By correcting selection bias via TSR/SSR metrics, the model achieved 0.995 AUC and 92.0% purity, significantly outperforming traditional u-dropout methods."
