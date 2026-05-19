@@ -158,8 +158,8 @@ params:
     subtitle: "B.S. in Physics, Tsinghua University | Exchange Student, UC Berkeley"
     content: >
       Hello! I'm Zisen Dai /ˈziː sən daɪ/ (戴子森), a 3rd-year undergraduate student majoring in Physics 
-      at <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>. I am currently visiting 
-      <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> as an exchange student in Astrophysics. <br><br>
+      at <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>. I previously visited  
+      <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> as an exchange student in astrophysics and am now a research assistant there. <br><br>
       My research broadly focuses on theoretical and observational astrophysics. At Tsinghua, I work on cosmic ray transport in protoplanetary disks 
       advised by <a href="https://i.astro.tsinghua.edu.cn/~xbai/" target="_blank">Xuening Bai</a>. Concurrently at UC Berkeley, 
       I am investigating high-energy transients in <a href="https://wenbinlu.github.io/" target="_blank">Wenbin Lu's group</a>. 
@@ -193,7 +193,7 @@ params:
         school:
           name: "UC Berkeley"
           url: "https://www.berkeley.edu"
-        date: "Jan 2026 - Present"
+        date: "Jan 2026 - May 2026"
         # content: |-
         #   - **Adviser:** <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">
         #                   Wenbin Lu</a>
@@ -217,7 +217,7 @@ params:
         companyUrl: "https://astro.berkeley.edu/"
         jobs:
           - name: "Research Assistant"
-            date: "Feb 2026 - Present"
+            date: "May 2026 - Present"
             content: |-
               *Advised by <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit;">
               Wenbin Lu</a>*
