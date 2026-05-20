@@ -178,8 +178,8 @@ params:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://github.com/Zireael-Rhena
-        - icon: fab fa-instagram
-          url: https://www.instagram.com/zireael_sh/
+        # - icon: fab fa-instagram
+        #   url: https://www.instagram.com/zireael_sh/
         - icon: fas fa-envelope
           url: mailto:1993803553qq@gmail.com
 
