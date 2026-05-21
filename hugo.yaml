@@ -155,7 +155,7 @@ params:
   hero:
     enable: true
     title: "Zisen Dai"
-    subtitle: "B.S. in Physics, Tsinghua University | Exchange Student, UC Berkeley"
+    subtitle: "B.S. in Physics, Tsinghua University"
     content: >
       Hello! I'm Zisen Dai /ˈziː sən daɪ/ (戴子森), a 3rd-year undergraduate student majoring in Physics 
       at <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>. I previously visited  
