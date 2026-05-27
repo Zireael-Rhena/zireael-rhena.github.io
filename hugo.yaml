@@ -189,15 +189,6 @@ params:
     title: "Education"
     index: false
     items:
-      - title: "Exchange Student in Astrophysics"
-        school:
-          name: "UC Berkeley"
-          url: "https://www.berkeley.edu"
-        date: "Jan 2026 - May 2026"
-        # content: |-
-        #   - **Adviser:** <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">
-        #                   Wenbin Lu</a>
-
       - title: "Bachelor of Science in Physics"
         school:
           name: "Tsinghua University"
@@ -207,6 +198,20 @@ params:
         content: |-
           - **Selected Honors:** National Scholarship (*Twice, Highest Honor for Undergraduates*) 
           - **Program:** Member of the *Tsinghua Xuetang Talents Program*
+
+      - title: "Exchange Student in Astrophysics"
+        school:
+          name: "UC Berkeley"
+          url: "https://www.berkeley.edu"
+        date: "Jan 2026 - May 2026"
+        GPA: "**GPA: 4.0 / 4.0**"
+        # content: |-
+        #   - A+ & A in all courses.
+        # content: |-
+        #   - **Adviser:** <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">
+        #                   Wenbin Lu</a>
+
+      
 
   # Research Experience
   experience:
