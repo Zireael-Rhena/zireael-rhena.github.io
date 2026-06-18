@@ -181,7 +181,7 @@ params:
         # - icon: fab fa-instagram
         #   url: https://www.instagram.com/zireael_sh/
         - icon: fas fa-envelope
-          url: mailto:1993803553qq@gmail.com
+          url: mailto:zisen.dai.phys@gmail.com
 
  # Education
   education:
@@ -334,7 +334,7 @@ params:
     # title: "Custom Name"
     content: My inbox is always open—whether about my research or to chat, I’d love to hear from you.
     btnName: Mail me
-    btnLink: mailto:1993803553qq@gmail.com
+    btnLink: mailto:zisen.dai.phys@gmail.com
     # formspree:
     #   enable: true # `contact.email` value will be ignored
     #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
