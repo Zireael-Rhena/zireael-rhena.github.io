@@ -1,0 +1,102 @@
+{{ if .Site.Params.research.enable | default false }}
+{{- $research := .Site.Language.Params.research | default .Site.Params.research -}}
+<section id="research" class="py-5">
+    <div class="container">
+        <h3 class="text-center section-heading" style="font-weight: 300;">{{ $research.title | default "Research Experience" }}</h3>
+        <div class="row justify-content-center py-5">
+            {{ range $research.items }}
+            <div class="col-md-10 col-lg-9 mb-4">
+                <article class="card shadow-sm academic-section-card">
+                    <div class="card-body p-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-baseline column-gap-3">
+                            <h5 class="card-title fw-bold mb-1">{{ .title }}</h5>
+                            <small class="fw-bold text-muted text-nowrap">{{ .date }}</small>
+                        </div>
+
+                        <div class="research-meta mb-3">
+                            {{ if .institutionUrl -}}
+                            <a href="{{ .institutionUrl }}" target="_blank" rel="noopener">{{ .institution }}</a>
+                            {{- else -}}
+                            {{ .institution }}
+                            {{- end }}
+                            {{ with .location }}<span class="text-muted"> · {{ . }}</span>{{ end }}
+                            <br>
+                            {{ .role }}{{ if .advisor }} · Advisor:
+                            {{ if .advisorUrl -}}
+                            <a href="{{ .advisorUrl }}" target="_blank" rel="noopener">{{ .advisor }}</a>
+                            {{- else -}}
+                            {{ .advisor }}
+                            {{- end }}{{ end }}
+                        </div>
+
+                        {{ if .image }}
+                        <figure class="research-figure mb-3">
+                            <img src="{{ .image }}" alt="{{ .title }}" loading="lazy">
+                            {{ with .imageCaption }}<figcaption class="text-muted">{{ . | markdownify }}</figcaption>{{ end }}
+                        </figure>
+                        {{ end }}
+
+                        <div class="research-content">
+                            {{ .content | markdownify }}
+                        </div>
+
+                        {{ with .outputs }}
+                        <ul class="research-outputs mb-0">
+                            {{ range . }}
+                            <li>{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                </article>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<style>
+    .research-meta {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .research-content p {
+        margin-bottom: 0.75rem;
+        line-height: 1.7;
+    }
+
+    .research-outputs {
+        list-style: none;
+        padding-left: 0;
+        font-size: 0.95rem;
+    }
+    .research-outputs li {
+        position: relative;
+        padding-left: 1.2rem;
+        margin-bottom: 0.35rem;
+    }
+    .research-outputs li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+    }
+
+    .research-figure {
+        background-color: #ffffff;
+        border-radius: 0.75rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    .research-figure img {
+        max-width: 100%;
+        max-height: 320px;
+        object-fit: contain;
+    }
+    .research-figure figcaption {
+        font-size: 0.85rem;
+        padding-top: 0.4rem;
+    }
+</style>
+{{ end }}

@@ -106,11 +106,29 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.experience.enable | default false) (not (.Site.Params.navbar.menus.disableExperience | default false)) }}
+                    {{ if and (.Site.Params.research.enable | default false) (not (.Site.Params.navbar.menus.disableResearch | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#experience"
-                            aria-label="experience">
-                            {{ .Site.Params.experience.title | default (i18n "nav_experience") }}
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#research"
+                            aria-label="research">
+                            {{ .Site.Params.research.navTitle | default .Site.Params.research.title }}
+                        </a>
+                    </li>
+                    {{ end }}
+
+                    {{ if and (.Site.Params.publications.enable | default false) (not (.Site.Params.navbar.menus.disablePublications | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#publications"
+                            aria-label="publications">
+                            {{ .Site.Params.publications.navTitle | default .Site.Params.publications.title }}
+                        </a>
+                    </li>
+                    {{ end }}
+
+                    {{ if and (.Site.Params.awards.enable | default false) (not (.Site.Params.navbar.menus.disableAwards | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#awards"
+                            aria-label="awards">
+                            {{ .Site.Params.awards.navTitle | default .Site.Params.awards.title }}
                         </a>
                     </li>
                     {{ end }}
@@ -119,16 +137,7 @@
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#projects"
                             aria-label="projects">
-                            {{ .Site.Params.projects.title | default (i18n "nav_projects") }}
-                        </a>
-                    </li>
-                    {{ end }}
-
-                    {{ if and (.Site.Params.achievements.enable | default false) (not (.Site.Params.navbar.menus.disableAchievements | default false)) }}
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#achievements"
-                            aria-label="achievements">
-                            {{ .Site.Params.achievements.title | default (i18n "nav_achievements") }}
+                            {{ .Site.Params.projects.navTitle | default .Site.Params.projects.title | default (i18n "nav_projects") }}
                         </a>
                     </li>
                     {{ end }}

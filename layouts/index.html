@@ -1,5 +1,5 @@
 {{ define "head" }}
-<meta name="description" content={{ .Site.Params.description }}>
+<meta name="description" content="{{ .Site.Params.description }}">
 <link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 <link rel="stylesheet" href="{{ (printf "%scss/projects.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 
@@ -15,8 +15,9 @@
 {{- partial "sections/hero/index.html" . -}}
 {{- partial "sections/about.html" . -}}
 {{- partial "sections/education.html" . -}}
-{{- partial "sections/experience.html" . -}}
+{{- partial "sections/research.html" . -}}
+{{- partial "sections/publications.html" . -}}
+{{- partial "sections/awards.html" . -}}
 {{- partial "sections/projects.html" . -}}
-{{- partial "sections/achievements.html" . -}}
 {{- partial "sections/contact.html" . -}}
 {{ end }}

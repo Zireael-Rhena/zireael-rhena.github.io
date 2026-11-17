@@ -1,7 +1,7 @@
 baseURL: "https://zireael-rhena.github.io/"
 languageCode: "en-us"
 title: "Zisen Dai | Tsinghua University"
-description: Undergraduate researcher in Astrophysics at Tsinghua University. Welcome to my personal website.
+description: "Zisen Dai is a senior physics undergraduate at Tsinghua University working on theoretical and computational astrophysics: accretion, outflows, and particle transport."
 theme: hugo-profile
 relativeURLs: true
 canonifyURLs: false
@@ -79,7 +79,7 @@ Menus:
 
 params:
   title: "Zisen Dai | Tsinghua University"
-  description: Undergraduate researcher in Astrophysics at Tsinghua University. Welcome to my personal website.
+  description: "Zisen Dai is a senior physics undergraduate at Tsinghua University working on theoretical and computational astrophysics: accretion, outflows, and particle transport."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/favicon.png"
 
@@ -144,11 +144,12 @@ params:
       showOnScrollUp : true
     enableSeparator: false
     menus:
-      disableAbout: false
-      disableExperience: false
+      disableAbout: true # Research Interests sits right below the hero; keep the navbar short
       disableEducation: false
+      disableResearch: false
+      disablePublications: false
+      disableAwards: false
       disableProjects: false
-      disableAchievements: false
       disableContact: false
 
   # Hero
@@ -157,20 +158,19 @@ params:
     title: "Zisen Dai"
     subtitle: "B.S. in Physics, Tsinghua University"
     content: >
-      Hello! I'm Zisen Dai /ˈziː sən daɪ/ (戴子森), a 3rd-year undergraduate student majoring in Physics 
-      at <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>. I previously visited  
-      <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a> as an exchange student in astrophysics and am now a research assistant there. <br><br>
-      My research broadly focuses on theoretical and observational astrophysics. At Tsinghua, I work on cosmic ray transport in protoplanetary disks 
-      advised by <a href="https://i.astro.tsinghua.edu.cn/~xbai/" target="_blank">Xuening Bai</a>. Concurrently at UC Berkeley, 
-      I am investigating high-energy transients in <a href="https://wenbinlu.github.io/" target="_blank">Wenbin Lu's group</a>. 
-      I am deeply fascinated by these extreme phenomena and aspire to leverage analytical models to uncover the physical mechanisms behind them.
+      Hello! I'm Zisen Dai /ˈziː sən daɪ/ (戴子森). I am a senior (4th-year) physics undergraduate at
+      <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>
+      (Zhili College; Xuetang Talents Program in Physics), working with
+      Prof. <a href="https://i.astro.tsinghua.edu.cn/~xbai/" target="_blank">Xue-Ning Bai</a> at Tsinghua and
+      Prof. <a href="https://wenbinlu.github.io/" target="_blank">Wenbin Lu</a> at UC Berkeley. <br><br>
+      I am applying to PhD programs in astrophysics for Fall 2027.
     image: /avatar.jpg
     bottomImage:
       enable: true
     roundImage: true
     button:
       enable: true
-      name: "Curriculum Vitae"
+      name: "CV (updated Nov 2026)"
       url: "/CV_ZisenDai.pdf"
       download: false
       newPage: true
@@ -182,110 +182,159 @@ params:
         #   url: https://www.instagram.com/zireael_sh/
         - icon: fas fa-envelope
           url: mailto:zisen.dai.phys@gmail.com
+        - icon: fab fa-orcid
+          url: https://orcid.org/0009-0005-4398-0138
 
- # Education
+  # Research Interests (rendered by the theme's "about" section)
+  about:
+    enable: true
+    title: "Research Interests"
+    content: |-
+      I am drawn to theoretical and computational astrophysics, and am currently most interested in
+      accretion, outflows, and particle transport. I enjoy building models to understand how competing
+      physical processes play out, and digging into simulation results until I can explain complex
+      behavior in clear physical terms.
+
+  # Education
   education:
     enable: true
     title: "Education"
     index: false
     items:
-      - title: "Bachelor of Science in Physics"
+      - title: "B.S. in Physics, Zhili College"
         school:
           name: "Tsinghua University"
           url: "https://www.tsinghua.edu.cn/en/"
-        date: "Aug 2023 - Present"
-        GPA: "**GPA: 4.0 / 4.0** | **Rank: 1 / 28**"
+        date: "Aug 2023 – Jun 2027 (expected)"
+        GPA: "**GPA: 4.0 / 4.0** | **Rank: 1 / 18**"
         content: |-
-          - **Selected Honors:** National Scholarship (*Twice, Highest Honor for Undergraduates*) 
-          - **Program:** Member of the *Tsinghua Xuetang Talents Program*
+          - Tsinghua Xuetang Talents Program in Physics (Chi-Sun Yeh Class)
+          - Perfect grades (4.00/4.00) across all 26 major courses (including 8 A+, 14 A)
 
       - title: "Exchange Student in Astrophysics"
         school:
-          name: "UC Berkeley"
+          name: "University of California, Berkeley"
           url: "https://www.berkeley.edu"
-        date: "Jan 2026 - May 2026"
+        date: "Jan 2026 – May 2026"
         GPA: "**GPA: 4.0 / 4.0**"
-        # content: |-
-        #   - A+ & A in all courses.
-        # content: |-
-        #   - **Adviser:** <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit; text-decoration: underline;">
-        #                   Wenbin Lu</a>
 
-      
-
-  # Research Experience
-  experience:
+  # Research Experience (layouts/partials/sections/research.html)
+  # Optional per item: image (e.g. "/images/research/xxx.png") and imageCaption.
+  research:
     enable: true
     title: "Research Experience"
+    navTitle: "Research"
     items:
-      - company: "Department of Astronomy, UC Berkeley"
-        companyUrl: "https://astro.berkeley.edu/"
-        jobs:
-          - name: "Research Assistant"
-            date: "May 2026 - Present"
-            content: |-
-              *Advised by <a href="https://wenbinlu.github.io/" target="_blank" style="color: inherit;">
-              Wenbin Lu</a>*
+      - title: "Cosmic-ray transport in protoplanetary disk winds"
+        institution: "Institute for Advanced Study, Tsinghua University"
+        institutionUrl: "https://www.ias.tsinghua.edu.cn/en"
+        role: "Research Assistant"
+        advisor: "Prof. Xue-Ning Bai"
+        advisorUrl: "https://i.astro.tsinghua.edu.cn/~xbai/"
+        date: "Mar 2025 – Present"
+        location: "Beijing, China"
+        content: |-
+          Cosmic rays (CRs) are a key ionization source in protoplanetary disks (PPDs), but it is unclear how
+          much of the interstellar flux survives the trip through a disk's magnetized wind. I wrote a Python
+          particle-transport code from scratch that follows CR protons along a field line of a magneto-thermal
+          wind model under the guiding-center approximation, with pitch-angle scattering and cross-field
+          diffusion standing in for turbulence. In a laminar wind, CRs lose energy to the outflow. In a
+          turbulent one, the flux reaching the disk is largely set by the balance between wind advection and
+          turbulent diffusion. In all cases, the wind depletes lower-energy CRs the most.
+        outputs:
+          - "Paper: **Dai, Z.**, & Bai, X.-N., *Cosmic Ray Transport in Protoplanetary Disk Winds: A Theoretical Framework*, ApJ, in prep."
+          - "Contributed talk at The Lin-Bridge Exoplanet Symposium (Jingzhou, Oct 2026), which received the Lin-Bridge Scholarship (First Prize)"
 
-              - Tracking cutting-edge developments in high-energy transients via weekly group discussions.
-              
-      - company: "Institute for Advanced Study, Tsinghua University"
-        companyUrl: "https://www.ias.tsinghua.edu.cn/en"
-        jobs:
-          - name: "Research Assistant"
-            date: "Mar 2025 - Present"
-            content: |-
-              *Advised by <a href="https://i.astro.tsinghua.edu.cn/~xbai/" 
-              target="_blank" style="color: inherit;">Xuening Bai</a>*
+      - title: "Hydrodynamic evolution of micro-TDE disks and their wind emission"
+        institution: "Department of Astronomy, UC Berkeley"
+        institutionUrl: "https://astro.berkeley.edu/"
+        role: "Research Assistant"
+        advisor: "Prof. Wenbin Lu"
+        advisorUrl: "https://wenbinlu.github.io/"
+        date: "May 2026 – Present"
+        location: "Berkeley, CA, USA"
+        content: |-
+          A micro-tidal disruption event (micro-TDE) occurs when a star is torn apart by a stellar-mass
+          black hole, leaving an accretion disk around the black hole. Taking this disk as already formed,
+          I study how it evolves and what emission its wind produces, using 2D viscous hydrodynamic
+          simulations with Athena++.
 
-              - Investigating cosmic ray transport dynamics within protoplanetary disk (PPD) winds.
-              - Developed a Python simulation framework from scratch to model particle transport via the Guiding Center Approximation, analyzing the impact of scattering mechanisms and strengths.
+  # Publications & Talks (layouts/partials/sections/publications.html)
+  publications:
+    enable: true
+    title: "Publications & Talks"
+    navTitle: "Publications"
+    papers:
+      title: "Publications & Manuscripts"
+      items:
+        - authors: "**Dai, Z.**, & Bai, X.-N."
+          title: "Cosmic Ray Transport in Protoplanetary Disk Winds: A Theoretical Framework"
+          venue: "ApJ, in prep."
+          # Once posted, set url to the arXiv abstract page; the title becomes a link.
+          url: ""
+    talks:
+      title: "Talks"
+      items:
+        - title: "Cosmic Ray Transport in Protoplanetary Disk Winds"
+          type: "Contributed talk"
+          event: "The Lin-Bridge Exoplanet Symposium"
+          location: "Jingzhou, China"
+          date: "Oct 2026"
+          # Set to a slides URL to show a "Slides" link.
+          slides: ""
 
-  # Achievements
-  achievements:
-    enable: false
-    title: "Publications"
+  # Awards & Honors (layouts/partials/sections/awards.html)
+  awards:
+    enable: true
+    title: "Awards & Honors"
+    navTitle: "Awards"
     items:
-      - title: Google kickstart runner
-        content: I solved all problems with optimal solution.
-        url: https://example.com
-        image: /images/achievement.jpg
-      - title: Facebook Hackathon Winner
-        content: Developed a product using Artificial Intelligence.
-        image: /images/achievement.jpg
-      - title: Hugo Profile
-        content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
-        image: /images/achievement.jpg
-      - title: Microsoft Imagine Runner
-        content: We are developed a product which can help others.
-      - title: Google Summer of Code
-        content: Contributed to a open source project.
-        url: https://example.com
+      - name: "National Scholarship"
+        detail: "Ministry of Education of China, highest honor for undergraduates"
+        date: "2024, 2025, 2026"
+      - name: "Lin-Bridge Scholarship, First Prize"
+        detail: "Nanjing University, for contributed talk"
+        date: "2026"
+      - name: "Chi-Sun Yeh Scholarship"
+        detail: "Tsinghua Xuetang Talents Program in Physics"
+        date: "2023 – 2026"
+      - name: "Excellent Academic Performance Scholarship"
+        detail: "Tsinghua University"
+        date: "2024, 2025, 2026"
+      - name: "Basic Disciplines Interdisciplinary Challenge Competition, Third Prize"
+        detail: "Tsinghua University"
+        date: "2025"
+      - name: "Chinese Physics Olympiad (CPhO), First Prize"
+        detail: "Zhejiang Province"
+        date: "2022"
 
   # projects
   projects:
     enable: true
-    title: "Selected Projects"
+    title: "Selected Course Projects"
+    navTitle: "Projects"
     items:
-      - title: "Rosseland-Mean Opacity Computation"
-        content: "Developed a Python framework to computing the Rosseland-mean opacity of pure hydrogen gas in
-          LTE, and benchmarking it against the LANL/TOPS opacity tables. Localized the main opacity discrepancy domains and analyzed the missing physical channels and
-          omitted physics causing the issue."
+      - title: "Rosseland Mean Opacity of Pure Hydrogen Gas"
+        date: "Apr 2026"
+        content: "Developed a Python framework to compute the Rosseland mean opacity of pure hydrogen gas in LTE,
+          and benchmarked it against the Los Alamos TOPS opacity tables. Located the regimes where the two
+          disagree most and analyzed the physical channels missing from the calculation that cause the discrepancy."
         image: "/images/projects/benchmark_kR_vs_T_slide.png"
         featured:
-          name: "View Source"
-          link: "https://github.com/Zireael-Rhena/Rosseland-Mean-Opacity"
+          name: "Read Report"
+          link: "https://github.com/Zireael-Rhena/Rosseland-Mean-Opacity/blob/main/Rosseland_Mean_Opacity_of_Pure_Hydrogen_Gas.pdf"
         badges:
-          - "Rosseland-Mean Opacity"
+          - "Opacity"
           - "Radiative Transfer"
         links:
           - icon: "fab fa-github"
             url: "https://github.com/Zireael-Rhena/Rosseland-Mean-Opacity"
 
-      - title: "High-Redshift LBGs Selection via Machine Learning"
-        content: "Developed a LightGBM classifier to identify high-redshift Lyman Break Galaxies (z ~ 2-3) from CLAUDS photometric data. 
-          By correcting selection bias via TSR/SSR metrics, the model achieved 0.995 AUC and 92.0% purity, significantly outperforming traditional u-dropout methods."
+      - title: "Lyman-Break Galaxy (LBG) Selection from Photometric Data"
+        date: "Jan 2026"
+        content: "Developed a LightGBM classifier to identify Lyman-break galaxies at redshift 2–3 from CLAUDS photometry.
+          After correcting for selection bias with TSR/SSR metrics, the model reached 0.995 AUC and 92.0% purity,
+          outperforming the traditional u-dropout method with a 3.3× larger sample."
         image: "/images/projects/lbg_selection.png"
         featured:
           name: "Read Report"
@@ -298,9 +347,11 @@ params:
           - icon: "fab fa-github"
             url: "https://github.com/Zireael-Rhena/Target_Selection_Based_on_Photometric_Data"
 
-      - title: "JUNO Optical Simulation & Signal Reconstruction"
-        content: "Built a Python-based Monte Carlo framework to simulate complex photon transport and Fresnel reflection for 17,612 PMTs. 
-          Engineered a high-capacity LightGBM model with multi-center Gaussian attention to reconstruct spatial-temporal Probe functions, reducing integral error to ~3%."
+      - title: "Jiangmen Underground Neutrino Observatory (JUNO) Simulation"
+        date: "Aug 2025"
+        content: "Built a Python Monte Carlo framework to simulate photon transport, including Fresnel reflection, across 17,612 PMTs.
+          Trained a LightGBM model with multi-center Gaussian attention to reconstruct the spatial-temporal probe functions,
+          reducing the integral error to ~3%."
         image: "/images/projects/juno.png"
         featured:
           name: "View Source"
@@ -313,9 +364,11 @@ params:
           - icon: "fab fa-github"
             url: "https://github.com/Zireael-Rhena/JUNO-Reconstruction"
 
-      - title: "Supernova Spectrum & Light Curve Analysis"
-        content: "Analyzed multi-band photometric and spectroscopic data to classify SN 2025kid as a Type Ia supernova. 
-          Extracted key parameters (peak magnitude, decline rate) of SN 2025fvw via light curve fitting, utilizing the Phillips relation for standardization."
+      - title: "Spectrum and Light Curve Analysis of Supernovae"
+        date: "Jun 2025"
+        content: "Analyzed multi-band photometric and spectroscopic data to classify SN 2025kid as a Type Ia supernova.
+          Extracted key parameters (peak magnitude, decline rate Δm15) of SN 2025fvw by light-curve fitting,
+          using the Phillips relation for standardization."
         image: "/images/projects/sn_lightcurve.png"
         featured:
           name: "Read Report"

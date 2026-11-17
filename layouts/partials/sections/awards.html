@@ -1,0 +1,49 @@
+{{ if .Site.Params.awards.enable | default false }}
+{{- $awards := .Site.Language.Params.awards | default .Site.Params.awards -}}
+<section id="awards" class="py-5">
+    <div class="container">
+        <h3 class="text-center section-heading" style="font-weight: 300;">{{ $awards.title | default "Awards & Honors" }}</h3>
+        <div class="row justify-content-center py-5">
+            <div class="col-md-10 col-lg-9">
+                <div class="card shadow-sm academic-section-card">
+                    <div class="card-body p-4">
+                        <ul class="award-list">
+                            {{ range $awards.items }}
+                            <li>
+                                <div class="d-flex flex-wrap justify-content-between align-items-baseline column-gap-3">
+                                    <span class="fw-semibold">{{ .name }}</span>
+                                    <small class="fw-bold text-muted text-nowrap">{{ .date }}</small>
+                                </div>
+                                {{ with .detail }}<div class="award-detail text-muted">{{ . }}</div>{{ end }}
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .award-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    .award-list li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(108, 117, 125, 0.2);
+    }
+    .award-list li:first-child {
+        padding-top: 0;
+    }
+    .award-list li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .award-detail {
+        font-size: 0.9rem;
+    }
+</style>
+{{ end }}

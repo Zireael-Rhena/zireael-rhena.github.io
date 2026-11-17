@@ -1,0 +1,77 @@
+{{ if .Site.Params.publications.enable | default false }}
+{{- $pubs := .Site.Language.Params.publications | default .Site.Params.publications -}}
+<section id="publications" class="py-5">
+    <div class="container">
+        <h3 class="text-center section-heading" style="font-weight: 300;">{{ $pubs.title | default "Publications & Talks" }}</h3>
+        <div class="row justify-content-center py-5">
+            <div class="col-md-10 col-lg-9">
+                <div class="card shadow-sm academic-section-card">
+                    <div class="card-body p-4">
+
+                        {{ with $pubs.papers }}
+                        <h5 class="card-title fw-bold mb-3">{{ .title | default "Publications" }}</h5>
+                        <ol class="pub-list">
+                            {{ range .items }}
+                            <li>
+                                {{ .authors | markdownify }},
+                                <em>{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</em>,
+                                {{ .venue }}
+                            </li>
+                            {{ end }}
+                        </ol>
+                        {{ end }}
+
+                        {{ with $pubs.talks }}
+                        <h5 class="card-title fw-bold mb-3 mt-4">{{ .title | default "Talks" }}</h5>
+                        <ul class="talk-list">
+                            {{ range .items }}
+                            <li>
+                                <div class="d-flex flex-wrap justify-content-between align-items-baseline column-gap-3">
+                                    <span class="fw-semibold">{{ .title }}</span>
+                                    <small class="fw-bold text-muted text-nowrap">{{ .date }}</small>
+                                </div>
+                                <div class="talk-meta">
+                                    {{ with .type }}{{ . }}, {{ end }}{{ .event }}{{ with .location }}<span class="text-muted"> · {{ . }}</span>{{ end }}
+                                    {{ with .slides }} · <a href="{{ . }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf me-1"></i>Slides</a>{{ end }}
+                                </div>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .pub-list {
+        padding-left: 1.25rem;
+        margin-bottom: 0;
+        line-height: 1.7;
+    }
+    .pub-list li {
+        margin-bottom: 0.5rem;
+    }
+    .pub-list li p {
+        display: inline;
+    }
+
+    .talk-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    .talk-list li {
+        margin-bottom: 0.75rem;
+    }
+    .talk-list li:last-child {
+        margin-bottom: 0;
+    }
+    .talk-meta {
+        font-size: 0.95rem;
+    }
+</style>
+{{ end }}
