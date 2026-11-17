@@ -144,7 +144,7 @@ params:
       showOnScrollUp : true
     enableSeparator: false
     menus:
-      disableAbout: true # Research Interests sits right below the hero; keep the navbar short
+      disableAbout: false
       disableEducation: false
       disableResearch: false
       disablePublications: false
@@ -163,6 +163,10 @@ params:
       (Zhili College; Xuetang Talents Program in Physics), working with
       Prof. <a href="https://i.astro.tsinghua.edu.cn/~xbai/" target="_blank">Xue-Ning Bai</a> at Tsinghua and
       Prof. <a href="https://wenbinlu.github.io/" target="_blank">Wenbin Lu</a> at UC Berkeley. <br><br>
+      I am drawn to theoretical and computational astrophysics, and am currently most interested in
+      accretion, outflows, and particle transport. I enjoy building models to understand how competing
+      physical processes play out, and digging into simulation results until I can explain complex
+      behavior in clear physical terms. <br><br>
       I am applying to PhD programs in astrophysics for Fall 2027.
     image: /avatar.jpg
     bottomImage:
@@ -170,7 +174,7 @@ params:
     roundImage: true
     button:
       enable: true
-      name: "CV (updated Nov 2026)"
+      name: "CV"
       url: "/CV_ZisenDai.pdf"
       download: false
       newPage: true
@@ -184,16 +188,6 @@ params:
           url: mailto:zisen.dai.phys@gmail.com
         - icon: fab fa-orcid
           url: https://orcid.org/0009-0005-4398-0138
-
-  # Research Interests (rendered by the theme's "about" section)
-  about:
-    enable: true
-    title: "Research Interests"
-    content: |-
-      I am drawn to theoretical and computational astrophysics, and am currently most interested in
-      accretion, outflows, and particle transport. I enjoy building models to understand how competing
-      physical processes play out, and digging into simulation results until I can explain complex
-      behavior in clear physical terms.
 
   # Education
   education:

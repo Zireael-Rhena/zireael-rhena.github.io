@@ -232,3 +232,18 @@ body.dark .academic-section-card strong {
         text-align: left !important;
     }
 }
+
+/* Hero buttons: CV button and round social icons share one height so they line up */
+#hero a.btn {
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+#hero a.btn:not(.social-icon) {
+    padding: 0 1.5rem;
+}
+#hero a.btn.social-icon {
+    width: 2.5rem;
+    padding: 0;
+}
