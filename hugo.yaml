@@ -239,7 +239,7 @@ params:
           - "Paper: **Dai, Z.**, & Bai, X.-N., *Cosmic Ray Transport in Protoplanetary Disk Winds: A Theoretical Framework*, ApJ, in prep."
           - "Contributed talk at The Lin-Bridge Exoplanet Symposium (Jingzhou, Oct 2026), which received the Lin-Bridge Scholarship (First Prize)"
 
-      - title: "Hydrodynamic evolution of micro-TDE disks and their wind emission"
+      - title: "Long-term evolution of transient super-Eddington disks (e.g., micro-TDEs) and their wind emission"
         institution: "Department of Astronomy, UC Berkeley"
         institutionUrl: "https://astro.berkeley.edu/"
         role: "Research Assistant"
@@ -249,9 +249,15 @@ params:
         location: "Berkeley, CA, USA"
         content: |-
           A micro-tidal disruption event (micro-TDE) occurs when a star is torn apart by a stellar-mass
-          black hole, leaving an accretion disk around the black hole. Taking this disk as already formed,
-          I study how it evolves and what emission its wind produces, using 2D viscous hydrodynamic
-          simulations with Athena++.
+          black hole. The resulting disk accretes at highly super-Eddington rates, so photons are trapped in
+          the gas and the disk evolves almost adiabatically. I study such transient disks with long-duration
+          2D viscous hydrodynamic simulations in Athena++, for which I implemented an anisotropic shear
+          viscosity. Starting from a Stone et al. (1999) torus with a radiation-dominated equation of state
+          (γ = 4/3), the runs follow viscous spreading, angular momentum transport, and mass outflow over
+          many viscous times, and preliminary results show the disk converging toward self-similar
+          evolution in radius and time. I then post-process the simulated outflow to compute light curves
+          of the disk-wind emission; the resulting disk histories will also inform models of long-lived
+          transients such as the late UV plateau of AT2018cow.
 
   # Publications & Talks (layouts/partials/sections/publications.html)
   publications:
