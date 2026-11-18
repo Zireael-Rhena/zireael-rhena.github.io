@@ -24,3 +24,5 @@ exampleSite/themes/
 *.tar.gz
 
 public/
+
+.DS_Store
